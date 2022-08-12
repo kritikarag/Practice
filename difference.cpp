@@ -1,3 +1,6 @@
+#include <bits/stdc++.h>
+using namespace std;
+
 bool isPalindrome(char a[])
 {
     bool flag = true;
