@@ -15,7 +15,7 @@ int main(){
 
     int count=1;
     for(int i=1;i<n;i++){
-        if(vec[i].first>vec[i-1].second)count++;
+        if(vec[i].first>=vec[i-1].second)count++;
     }
 
     cout<<count<<endl;
