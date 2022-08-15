@@ -10,21 +10,21 @@ int reverseint(int i){
 
     return r;
 }
-bool isspecial(int n){
-    for(int i=1;i<=n/2;i++){
-        int req = n-i;
-        if(req==reverseint(i))return true;
+bool isspecial(string k){
+    //int n=k;
+    int n=stoi(k);
+    for(int i=1;i<=n;i++){
+        if(i+reverseint(i)==n)return true;
     }
     return false;
 }
 int main(){
     int n;
     cin>>n;
-    vector<string>v;
+    vector<string>v(n);
     int count=0;
     for(int i=0;i<n;i++){
         cin>>v[i];
-        v[i]=stoi(v[i]);
         if(isspecial(v[i]))count++;
     }
 
