@@ -7,7 +7,7 @@ int label(int n,int p){
         dp[0][i] = 5000 * (i + 1);
     for (int i = 1; i < 50; i++)
     {
-        for (int j = 0; j < 10; j++)
+        for (int j = 0; j < n; j++)
         {
             dp[i][j] = dp[i - 1][j] + 5000 + i;
             if (dp[i][j] == p)
