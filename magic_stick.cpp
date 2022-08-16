@@ -16,13 +16,14 @@ int main()
 {
     int n;
     cin >> n;
-    int a[n];
+    int a[n],l[n];
+    for(int i=0;i<n;i++)cin>>l[i];
     for (int i = 0; i < n; i++)
         cin >> a[i];
     pair<int, int> p[100];
     for (int i = 0; i < n; i++)
     {
-        p[i] = make_pair(a[i], i+1);
+        p[i] = make_pair(a[i],l[i]);
     }
     sort(p, p + n, compare);
     long long int ans = INT_MAX;
