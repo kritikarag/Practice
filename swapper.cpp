@@ -33,31 +33,19 @@ int main(){
     }
 
     while (end > start)
-    {
-        // if we found different chars
+    { 
         if (s[start] != s[end])
         {
-            int i = end; // make an additional iterator from the end
-
-            // move toward the start until we found the same char
+            int i = end; 
             while (i > start && s[i] != s[start])
             {
                 --i;
-            }
-
-            // if we scanned whole the string and found
-            // no one the same char swap char on the
-            // start with adjacent char it needs for
-            // case when the first char is not on it's
-            // right place all other parts of the
-            // algorithm don't process a char on the start
+            } 
             if (i == start)
             {
                 swap(s[start], s[start + 1]);
                 ++result;
-            }
-            // if the same character found swap all
-            // chars from i to the end
+            } 
             else
             {
                 while (i < end)
@@ -69,8 +57,7 @@ int main(){
                 ++start;
                 --end;
             }
-        }
-        // if s[start] == s[end] shrink the processing window
+        } 
         else
         {
             ++start;
