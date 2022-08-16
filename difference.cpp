@@ -3,9 +3,7 @@ using namespace std;
 
 bool isPalindrome(char a[])
 {
-    bool flag = true;
-    // Iterate the string forward and backward and compare one character at a time
-    // till middle of the string is reached
+    bool flag = true; 
     for (int i = 0; i < strlen(a) / 2; i++)
     {
         if (a[i] != a[strlen(a) - i - 1])
@@ -52,22 +50,16 @@ int main()
             count++;
             // When first palindromic word is found
             if (count == 1)
-            {
-                // Initialize smallPalin and bigPalin with first palindromic word
+            { 
                 strcpy(smallPalin, words[i]);
                 strcpy(bigPalin, words[i]);
             }
-
-            // Compare smallPalin and bigPalin with each palindromic words
+ 
             else
-            {
-                // If length of smallPalin is greater than next palindromic word
-                // Store that word in smallPalin
+            { 
                 if (strlen(smallPalin) > strlen(words[i]))
                     strcpy(smallPalin, words[i]);
 
-                // If length of bigPalin is less than next palindromic word
-                // Store that word in bigPalin
                 if (strlen(bigPalin) < strlen(words[i]))
                     strcpy(bigPalin, words[i]);
             }
