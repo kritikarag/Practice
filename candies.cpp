@@ -49,7 +49,6 @@ int main(){
             n = 0;
         }
     }
-
     // Count the total candies
     for (int i = 0; i < k; i++)
         arr[i] += (count * (i + 1)) + (k * (count * (count - 1)) / 2);
