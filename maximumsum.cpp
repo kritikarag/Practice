@@ -3,14 +3,14 @@ using namespace std;
 int findmaxsum(vector<int>&stock,int n, int k){
     int sum=-1;
     for(int i=0;i<n-k+1;i++){
-        map<int,int>mp;
+        unordered_map<int,int>mp;
         int curr=0;
         bool flag=true;
         for(int j=i;j<i+k;j++){
-            if(mp[stock[j]]>1){
+            if(mp[stock[j]]>0){
                 flag=false;
                 break;
-                //i=j;
+                i=j;
             }
            else{
              mp[stock[j]]++;
@@ -19,17 +19,6 @@ int findmaxsum(vector<int>&stock,int n, int k){
         }
         if(flag)sum=max(sum,curr);
         mp.clear();
-        // set<int>s;
-        // for(int j=i;j<i+k;j++){
-        //     s.insert(stock[i]);
-        // }
-        // if(s.size()==k){
-        //     int curr = 0;
-        //     for(int x: s){
-        //         curr+=x;
-        //     }
-        //     sum=max(sum,curr);
-        // }
     }
 
     return sum;
@@ -43,4 +32,6 @@ int main(){
     }
     cin>>k;
     cout<<"Result: "<<findmaxsum(stock,n,k)<<endl;
+
+    return 0;
 }
