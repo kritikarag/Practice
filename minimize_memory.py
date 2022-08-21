@@ -10,3 +10,7 @@ def minimizeMemory(processes, m):
                 curr_sum +=processes[i] - processes[i-m]
                 res = max(res,curr_sum)
         return sum(processes)-res
+
+m = int(input())
+processes=list(map(int,input().split()))
+print(minimizeMemory(processes,m))
