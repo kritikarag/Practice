@@ -1,4 +1,3 @@
-#1ST APPROACH
 def findminhealth(power,armor):
     n=len(power)
     ans=0
@@ -14,15 +13,3 @@ def findminhealth(power,armor):
         ans-=temp
         arm=False
     return ans+1
-
-#2ND APPROACH
-def findminhealth(power,armour):
-    return sum(power)-min(armour,max(power))+1
-
-
-power=list(map(int,input().split()))
-armour = int(input())
-print(findminhealth(power,armour))
-
-#2nd 
-
