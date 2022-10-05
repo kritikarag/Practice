@@ -69,15 +69,22 @@ int reqSteps(int m, int n, int req)
 int main()
 {
     int n,m,req;
+    //Take the user input for the capacity of Jug 1
     cout<<"Enter the capacity of Jug 1 : ";
     cin>>n;
     cout<<endl;
+
+    //Take the user input for the capacity of Jug 1
     cout<<"Enter the capacity of Jug 2 : ";
     cin>>m;
     cout<<endl;
+
+    // Take the user input for the capacity of water needed to be measured
     cout<<"Enter the capacity of water you want to measure : ";
     cin>>req;
     cout<<endl;
+
+    //Print the final Results
     cout<<"Minimum number of steps required to measure the water : "<<reqSteps(m, n, req)<<endl;
 
     return 0;
