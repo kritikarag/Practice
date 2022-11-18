@@ -1,0 +1,1 @@
+{"name":"Local: queries","url":"c:\\Code\\C C++\\Practice\\queries.py","tests":[{"id":1668779454568,"input":"5 3\n1 5 9 2 3\n3\n2 2\n1 1 8\n2 2","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Code\\C C++\\Practice\\queries.py","group":"local","local":true}
