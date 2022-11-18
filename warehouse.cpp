@@ -1,13 +1,13 @@
 #include <bits/stdc++.h>
 using namespace std;
-int bfs(vector<int>adj[],int ind,int n){
-    int count=0;
-    queue<int>q;
+long long bfs(vector<long long>adj[],long long ind,long long n){
+    long long count=0;
+    queue<long long>q;
     vector<bool>vis(n+1,false);
     q.push(ind);
     vis[ind] = true;
     while(!q.empty()){
-        int temp = q.front();
+        long long temp = q.front();
         q.pop();
         count++;
         for(auto it:adj[temp]){
@@ -24,17 +24,17 @@ int main()
     int t;
     cin>>t;
     while(t--){
-        int n,m;
+        long long n,m;
         cin>>n>>m;
-        vector<int>vec[n+1];
-        for(int i=0;i<m;i++){
-            int x,y;
+        vector<long long>vec[n+1];
+        for(long long i=0;i<m;i++){
+            long long x,y;
             cin>>x>>y;
             vec[x].push_back(y);
         }
 
-        int ans = 0;
-        for(int i=1;i<=n;i++){
+        long long ans = 0;
+        for(long long i=1;i<=n;i++){
             ans = max(ans,bfs(vec,i,n));
         }
         cout<<(n-ans+1)<<endl;

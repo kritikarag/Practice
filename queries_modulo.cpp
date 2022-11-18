@@ -10,17 +10,17 @@ int main(){
         cin>>vec[i];
         store[vec[i]%m]+=1;
     }
-    int quer;
-    cin>>quer;
-    while(quer--){
-        int tag;
-        cin>>tag;
-        if (tag==1){
-            int pos,val;
-            cin>>pos>>val;
-            store[vec[pos-1]%m] -= 1;
-            vec[pos-1] = val;
-            store[val%m]+=1;
+    int queries;
+    cin>>queries;
+    while(queries--){
+        int label;
+        cin>>label;
+        if (label==1){
+            int position,value;
+            cin>>position>>value;
+            store[vec[position-1]%m] -= 1;
+            vec[position-1] = value;
+            store[value%m]+=1;
         }
         else{
             int x;
@@ -40,17 +40,17 @@ int main(){
 //     {
 //         cin >> vec[i];
 //     }
-//     int quer;
-//     cin >> quer;
-//     while (quer--)
+//     int queries;
+//     cin >> queries;
+//     while (queries--)
 //     {
-//         int tag;
-//         cin >> tag;
-//         if (tag == 1)
+//         int label;
+//         cin >> label;
+//         if (label == 1)
 //         {
-//             int pos, val;
-//             cin >> pos >> val;
-//             vec[pos - 1] = val;
+//             int position, value;
+//             cin >> position >> value;
+//             vec[position - 1] = value;
 //         }
 //         else
 //         {
