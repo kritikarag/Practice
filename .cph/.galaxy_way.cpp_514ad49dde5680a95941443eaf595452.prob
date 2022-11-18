@@ -1,0 +1,1 @@
+{"name":"Local: galaxy_way","url":"c:\\Code\\C C++\\Practice\\galaxy_way.cpp","tests":[{"id":1668771409953,"input":"3 10 2\n2 4 52","output":"2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Code\\C C++\\Practice\\galaxy_way.cpp","group":"local","local":true}
