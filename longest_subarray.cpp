@@ -33,7 +33,19 @@ int main()
                     start = 1;
                     end++;
                 }
-            } 
+            }
+            // else if (numbers[i] - numbers[i - 1] == 1)
+            // {
+            //     swap(start, end);
+            //     start++;
+            //     end = 1;
+            // }
+            // else if (numbers[i - 1] - numbers[i] == 1)
+            // {
+            //     swap(start, end);
+            //     start = 1;
+            //     end++;
+            // }
             else
             {
                 start = 1;
