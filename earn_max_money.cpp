@@ -2,8 +2,12 @@
 using namespace std;
 // int dp[101][101];
 
-int maxMergingScore(int A[], int N, vector<vector<int>> &dp)
+int maxMergingScore(vector<int>&A)
 {
+    A.insert(A.begin(),1);
+    A.push_back(1);
+    int N = A.size();
+    vector<vector<int>> dp(N, vector<int>(N));
     for (int len = 1; len < N; ++len)
     {
         for (int i = 0; i + len < N; ++i)
@@ -21,10 +25,15 @@ int maxMergingScore(int A[], int N, vector<vector<int>> &dp)
 
 int main()
 {
-    int N = 6;
-    int A[] = {1, 3, 1, 5, 8, 1};
-    vector<vector<int>> dp(N, vector<int>(N));
-    cout << maxMergingScore(A, N, dp) << endl;
+    int N;
+    cin>>N;
+    vector<int>A(N);
+    for(int i=0;i<N;i++){
+        cin>>A[i];
+    } 
+    // int N = 6;
+    // int A[] = {1, 3, 1, 5, 8, 1};
+    cout << maxMergingScore(A) << endl;
 
     return 0;
 }

@@ -1,0 +1,1 @@
+{"name":"Local: earn_max_money","url":"c:\\Code\\C C++\\Practice\\earn_max_money.cpp","tests":[{"id":1669462097120,"input":"4\n3 1 5 8","output":"167"},{"id":1669462374621,"input":"7\n83 32 8 12 98 34 74","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Code\\C C++\\Practice\\earn_max_money.cpp","group":"local","local":true}
