@@ -6,7 +6,7 @@ def get_skilled(required,already,Books,price):
         if to_gain&(1<<x):
             to_gain^=(1<<x)
     m=len(Books)
-    //@cache
+    #@cache
     def solve(i,mask):
         if mask==0:return 0
         if i==m:return float('inf')
